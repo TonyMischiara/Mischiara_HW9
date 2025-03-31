@@ -9,16 +9,20 @@
   <body>
     <h1>Business Analytics Student Survey</h1>
     <form action="confirm.html" method="get">
+      <label for="name">Your name:</label>
+      <input type="text" id="name" name="name" autofocus required />
+      <br /><br />
+
       <label for="country">My home country is:</label>
-      <input type="text" id="country" name="country" autofocus required />
+      <input type="text" id="country" name="country" required />
       <br /><br />
 
       <label for="hometown"
         >My home town is:
         <span title="What town did you live in before coming to college?"
           >❓</span
-        ></label
-      >
+        >
+      </label>
       <input type="text" id="hometown" name="hometown" required />
       <br /><br />
 
