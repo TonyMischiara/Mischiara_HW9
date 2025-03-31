@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Confirm Your Submission</title>
   </head>
-  <body>
-    <h1>Confirm Your Submission</h1>
+  <body class="container text-center mt-5">
+    <h1 class="text-warning">Confirm Your Submission</h1>
     <p>Please review your information before final submission.</p>
-    <button onclick="window.location.href='thankyou.html'">Confirm</button>
-    <button onclick="window.location.href='form.html'">Go Back</button>
+    <p><strong>Name:</strong> <span id="userName"></span></p>
+    <button
+      class="btn btn-primary"
+      onclick="window.location.href='thankyou.html'"
+    >
+      Confirm
+    </button>
+    <button
+      class="btn btn-secondary"
+      onclick="window.location.href='form.html'"
+    >
+      Go Back
+    </button>
+
+    <script>
+      // Get name from URL and display it
+      const urlParams = new URLSearchParams(window.location.search);
+      document.getElementById("userName").textContent =
+        urlParams.get("name") || "Not provided";
+    </script>
   </body>
 </html>
